@@ -580,7 +580,7 @@ func initConfig() {
 			viper.Set(configKey, getConfig(configKey))
 		}
 	}
-	if getConfig("commit-message-generator.llm.api-key") == "" {
+	if getConfig("commit-message-generator.llm.api-key") == "" && getConfig("commit-message-generator.llm.protocol") == "openai" {
 		// 根据服务类型提供友好的API密钥设置提示
 		var helpMsg string
 		protocol := getConfig("commit-message-generator.llm.protocol")
