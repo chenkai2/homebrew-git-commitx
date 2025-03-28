@@ -2,7 +2,7 @@ class GitCommitx < Formula
   desc "AI-powered Git commit message generator"
   homepage "https://github.com/chenkai2/homebrew-git-commitx"
   url "https://github.com/chenkai2/homebrew-git-commitx/archive/refs/tags/v0.0.1.tar.gz"
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5" # Replace with actual SHA256 when available
+  sha256 "f8a36b5ef19680f023bb639a7575ab6ffda2f9f4f7ecf5cbaf9608e9e61828d5" # Replace with actual SHA256 when available
   license "MIT"
   head "https://github.com/chenkai2/homebrew-git-commitx.git", branch: "main"
 
