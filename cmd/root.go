@@ -13,7 +13,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/chenkai2/git-commitx/i18n"
+	"github.com/chenkai2/homebrew-git-commitx/i18n"
 	"github.com/go-git/go-git/v5"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"

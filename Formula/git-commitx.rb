@@ -1,10 +1,10 @@
 class GitCommitx < Formula
   desc "AI-powered Git commit message generator"
-  homepage "https://github.com/chenkai2/git-commitx"
-  url "https://github.com/chenkai2/git-commitx/archive/refs/tags/v0.0.1.tar.gz"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000" # Replace with actual SHA256 when available
+  homepage "https://github.com/chenkai2/homebrew-git-commitx"
+  url "https://github.com/chenkai2/homebrew-git-commitx/archive/refs/tags/v0.0.1.tar.gz"
+  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5" # Replace with actual SHA256 when available
   license "MIT"
-  head "https://github.com/chenkai2/git-commitx.git", branch: "main"
+  head "https://github.com/chenkai2/homebrew-git-commitx.git", branch: "main"
 
   # Build dependencies
   depends_on "go" => :build
@@ -16,7 +16,7 @@ class GitCommitx < Formula
     # Compile and install binary
     # -s -w flags reduce binary size by removing debug information
     system "go", "build", "-trimpath",
-           "-ldflags", "-s -w -X github.com/chenkai2/git-commitx/i18n.Version=#{version}",
+           "-ldflags", "-s -w -X github.com/chenkai2/homebrew-git-commitx/i18n.Version=#{version}",
            "-o", bin/"git-commitx"
     
     # Install shell completions if they become available in the future

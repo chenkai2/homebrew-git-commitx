@@ -14,8 +14,7 @@ OUTPUT_DIR="$SCRIPT_DIR/bin"
 mkdir -p "$OUTPUT_DIR"
 
 # 获取模块名称
-MODULE_NAME=$(grep -E '^module' go.mod | awk '{print $2}')
-BINARY_NAME=$(basename "$MODULE_NAME")
+BINARY_NAME=git-commitx
 
 # 默认编译所有平台
 BUILD_ALL=true
@@ -152,8 +151,13 @@ build() {
   
   # 设置环境变量并编译
   output_file="$OUTPUT_DIR/${BINARY_NAME}-${os}-${arch}"
+  zip_dir="$OUTPUT_DIR/zip"
+  mkdir -p "$zip_dir"
+  output_zip_file="$zip_dir/${BINARY_NAME}-${os}-${arch}.zip"
+  FULL_BINARY_NAME="${BINARY_NAME}"
   if [[ "$os" == "windows" ]]; then
     output_file="${output_file}.exe"
+    FULL_BINARY_NAME="${BINARY_NAME}.exe"
   fi
 
   if [[ "$os" == "linux" ]]; then
@@ -164,6 +168,10 @@ build() {
   
   if [[ $? -eq 0 ]]; then
     echo -e "${GREEN}Successfully built $output_file${NC}"
+    tmp_file=$zip_dir/$FULL_BINARY_NAME
+    cp $output_file $tmp_file
+    zip $output_zip_file $tmp_file
+    rm $tmp_file
   else
     echo -e "\033[0;31mFailed to build for $os/$arch\033[0m"
   fi

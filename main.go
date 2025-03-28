@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/chenkai2/git-commitx/cmd"
+	"github.com/chenkai2/homebrew-git-commitx/cmd"
 )
 
 func main() {

@@ -1,4 +1,4 @@
-module github.com/chenkai2/git-commitx
+module github.com/chenkai2/homebrew-git-commitx
 
 go 1.21
 

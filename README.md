@@ -7,7 +7,7 @@
 <h3 align="center">AI驱动的Git提交信息生成器</h3>
 
 <p align="center">
-  <a href="https://github.com/chenkai2/git-commitx/blob/main/LICENSE">
+  <a href="https://github.com/chenkai2/homebrew-git-commitx/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
   </a>
 </p>
@@ -26,15 +26,23 @@ git-commitx 是一个基于AI的命令行工具，它能够自动分析Git暂存
 
 ## 安装
 
-使用 Homebrew 安装 git-commitx：
+1. 使用 Homebrew 安装 git-commitx：
 
 ```bash
-brew install chenkai2/git-commitx/git-commitx
+brew install chenkai2/homebrew-git-commitx/git-commitx
 ```
 
-非 Homebrew 用户:
+2. 非 Homebrew 用户:
 
-可以从[发布页面]( Homebrew 用户可以从[发布页面](https://github.com/chenkai2/git-commitx/releases)下载对应系统的二进制文件，然后改名为`git-commitx`（windows下为`git-commitx.exe`）， 复制到 PATH 指定的任意目录(比如：`/usr/local/bin`，windows下为`C:\Windows\System32`)。
+可以从[发布页面]( Homebrew 用户可以从[发布页面](https://github.com/chenkai2/homebrew-git-commitx/releases)下载对应系统的zip压缩包，解压后移动到 PATH 内的任意目录(比如：`/usr/local/bin`，windows下为`C:\Windows\System32`)。
+
+3. 手动编译：
+
+```bash
+go get github.com/chenkai2/homebrew-git-commitx
+go mod vendor
+go build -o git-commitx main.go
+```bash
 
 ## 使用方法
 
