@@ -1,14 +1,14 @@
 # git-commitx
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/chenkai2/git-commitx/main/assets/logo.svg" alt="git-commitx Logo" width="128" height="128">
+  <img src="https://raw.githubusercontent.com/chenkai2/homebrew-git-commitx/main/assets/logo.png" alt="git-commitx Logo" width="128" height="128">
 </p>
 
 <h3 align="center">AI驱动的Git提交信息生成器</h3>
 
 <p align="center">
   <a href="https://github.com/chenkai2/homebrew-git-commitx/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+    <img src="https://img.shields.io/badge/license-MIT-blue.png" alt="License">
   </a>
 </p>
 
