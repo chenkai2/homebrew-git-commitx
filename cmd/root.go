@@ -11,6 +11,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"regexp"
 	"strings"
 
 	"github.com/chenkai2/homebrew-git-commitx/i18n"
@@ -499,6 +500,12 @@ func generateCommitMessage(stagedFiles []string, diffContent string) (string, er
 	if commitMessage.Len() == 0 {
 		return "", errors.New(i18n.T("error.no_commit_msg"))
 	}
+
+	// 清除测试标签区间
+	re := regexp.MustCompile(`(?s)<think>[\s\S]*?</think>\s*`) // 匹配标签区间
+	finalMsg := re.ReplaceAllString(commitMessage.String(), "")
+	commitMessage.Reset()
+	commitMessage.WriteString(strings.TrimSpace(finalMsg))
 
 	return strings.Trim(commitMessage.String(), "\n"), nil
 }
